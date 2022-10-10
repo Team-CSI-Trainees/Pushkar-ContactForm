@@ -1,7 +1,88 @@
-form{
-    border: 10px solid red;
+:root{
+    --color-primary:#222;
+    --color-background:#27277c;
+    --color-text: #eee;
+
 }
 
+
+
+
+body{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    background:url(image.jpg);
+    filter: blur(1.1);
+    color: var(--color-primary);
+    background-repeat: fixed;
+    /* background-position: top right; */
+    /* font-family: 'Roboto Mono', monospace; */
+}
+
+
+form{
+    border: 5px solid #4a0c85;
+    width: 40%;
+    margin: 15vh auto;
+    padding: 1rem;
+    background: var(--color-text);
+}
+.wrapper{
+display: grid;
+grid-template-columns: auto auto;
+}
+/* Errors styling */
 .error{
     color: red;
+}
+/* Wrap */
+.wrap{
+    margin: 2vh 2vw;
+}
+/* Heading  */
+.heading--form{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    margin: 1vh 13.3vw;
+}
+
+/* input content */
+.content{
+    outline: none;
+    border: none;
+    border-bottom: 3px red solid;
+}
+.content:focus{
+    background-color: bisque;
+}
+
+/* Submit button */
+.buttonSubmit{
+    cursor: pointer;
+    margin: 3vh 16vw;
+}
+.buttonSubmit:hover{
+    background-color: #27277c;
+    color: var(--color-text);
+    transform: scale(1.2);
+}
+
+
+/* CONTACTS */
+.contact{
+    display: flex;
+    margin: 2rem 4rem;
+    list-style: none;
+    justify-content: center;
+    
+}
+
+/* ICONS */
+.icons{
+    padding-right: 2rem;
+    transform: scale(1.3);
+}
+.icons:hover{
+    transform: scale(1.7);   
+    transition: transfrom 0.2s;
 }

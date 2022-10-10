@@ -7,7 +7,7 @@ const email =  document.getElementById("mail");
 const pass =  document.getElementById("pass");
 const cpass =  document.getElementById("cpass");
 const gender =  document.getElementsByClassName("gender");
-
+// let temp = 0;
 
 
 // function
@@ -19,6 +19,10 @@ let removeError = function(){
         error[i].innerHTML="";
     }
 }
+let success = function(){
+    alert("your form is sucessfully submitted");
+}
+// success();
 
 // Regex
 let rPhone = /^[7-9]([0-9]){9}$/;
@@ -35,31 +39,34 @@ function validateForm(){
     removeError();
 
     // Checking first name
+    fname.value=fname.value.trim();
     if(!(rName.test(fname.value))){
         inner("error--fName","**Invalid");
         returnVal= false;
     }
     
     if(fname.value==""){
-
+        
         inner("error--fName","**Can't be empty");
         returnVal= false;
     }
     
     // Checking last name
+    lname.value=lname.value.trim();
     if(!(rName.test(lname.value))){
         inner("error--lName","**Invalid");
         returnVal= false;
     }
     
     if(lname.value==""){
-
+        
         inner("error--lName","**Can't be empty");
         returnVal= false;
     }
 
 
     // Checking mobile number
+    phone.value=phone.value.trim();
     if(!(rPhone.test(phone.value))){
         inner("error--phone","**Invalid phone number");
         returnVal= false;
@@ -72,6 +79,7 @@ function validateForm(){
     
     
     // Checking email
+    email.value=email.value.trim();
     if(!(rEmail.test(email.value))){
         inner("error--email","**Invalid email number");
         returnVal= false;
@@ -84,8 +92,9 @@ function validateForm(){
 
     
     // Checking pass error
+    pass.value=pass.value.trim();
     if(!(rPass.test(pass.value))){
-        inner("error--pass","**Invalid email");
+        inner("error--pass","**Invalid password");
         returnVal= false;
     }
     if(pass.value==""){
@@ -94,6 +103,7 @@ function validateForm(){
     }
     
     // checking cpass error
+    cpass.value=cpass.value.trim();
     if(pass.value!==cpass.value){
         inner("error--cpass","Doesn't match password");
         returnVal= false;
@@ -104,13 +114,21 @@ function validateForm(){
     }
     
     // checking radio buttons
+    
     for (let opt of gender){
-        if(opt.checked == false){
+        if(opt.checked == true){
+            inner("error--gender","");
+            break;   
+        }
+        else{
+            returnVal= false;   
             inner("error--gender","**please select an option");
-            returnVal= false;
-            
         }
     }
+    
+    
+    // if(returnVal==true)
+    //     success();
 
     return returnVal;
 }

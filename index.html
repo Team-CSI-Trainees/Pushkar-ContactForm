@@ -6,84 +6,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&family=Roboto+Mono:ital@1&family=Roboto:wght@900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <main>
       <form name="myForm" onsubmit="return validateForm()">
         <!-- First Name -->
-        <div class="wrap">
-          <input
-            type="text"
-            name="fName"
-            placeholder="First Name"
-            id="fName"
-            class="content"
-          />
-          <span class="error" id="error--fName"></span>
-        </div>
-
-        <!-- Last Name -->
-        <div class="wrap">
-          <input
-            type="text"
-            name="lName"
-            placeholder="Last Name"
-            id="lName"
-            class="content"
-          />
-          <span for="lName" class="error" id="error--lName"></span>
-        </div>
-
-        <!-- Phone Number -->
-        <div class="wrap">
-          <input
-            type="text"
-            name="phoneNo"
-            placeholder="Phone Number"
-            id="phoneNo"
-            class="content"
-          />
-          <span for="phoneNo" class="error" id="error--phone"></span>
-        </div>
-
-        <!-- Email -->
-        <div class="wrap">
-          <input
-            type="text"
-            name="mail"
-            placeholder="Email"
-            id="mail"
-            class="content"
-          />
-          <span for="mail" class="error" id="error--email"></span>
-        </div>
-
-        <!-- Password -->
-        <div class="wrap">
-          <input
-            type="text"
-            name="pass"
-            placeholder="Password"
-            id="pass"
-            class="content"
-          />
-          <span for="pass" class="error" id="error--pass"></span>
-        </div>
-
-        <!-- Confirm Password -->
-        <div class="wrap">
-          <input
-            type="text"
-            name="cpass"
-            placeholder="Confirm Password"
-            id="cpass"
-            class="content"
-          />
-          <span for="cpass" class="error" id="error--cpass"></span>
+        <h2 class="heading--form">Contact Us</h2>
+        <hr />
+        <div class="wrapper">
+          <div class="wrap">
+            <input
+              type="text"
+              name="fName"
+              placeholder="First Name"
+              id="fName"
+              class="content"
+            />
+            <span class="error" id="error--fName"></span>
+          </div>
+          <!-- Last Name -->
+          <div class="wrap">
+            <input
+              type="text"
+              name="lName"
+              placeholder="Last Name"
+              id="lName"
+              class="content"
+            />
+            <span for="lName" class="error" id="error--lName"></span>
+          </div>
+          <!-- Phone Number -->
+          <div class="wrap">
+            <input
+              type="text"
+              name="phoneNo"
+              placeholder="Phone Number"
+              id="phoneNo"
+              class="content"
+            />
+            <span for="phoneNo" class="error" id="error--phone"></span>
+          </div>
+          <!-- Email -->
+          <div class="wrap">
+            <input
+              type="text"
+              name="mail"
+              placeholder="Email"
+              id="mail"
+              class="content"
+            />
+            <span for="mail" class="error" id="error--email"></span>
+          </div>
+          <!-- Password -->
+          <div class="wrap">
+            <input
+              type="text"
+              name="pass"
+              placeholder="Password"
+              id="pass"
+              class="content"
+            />
+            <span for="pass" class="error" id="error--pass"></span>
+          </div>
+          <!-- Confirm Password -->
+          <div class="wrap">
+            <input
+              type="text"
+              name="cpass"
+              placeholder="Confirm Password"
+              id="cpass"
+              class="content"
+            />
+            <span for="cpass" class="error" id="error--cpass"></span>
+          </div>
         </div>
 
         <!-- Branch -->
-        <hr />
         <span>Branch</span>
         <select name="branch" id="branch">
           <option value="CSE">CSE</option>
@@ -107,9 +111,50 @@
           <input type="radio" class="gender" name="gender" value="Other" />Other
           <span class="error" id="error--gender"></span>
         </div>
-        <button type="submit">Submit</button>
+        <br />
+        <button type="submit" class="buttonSubmit">Submit</button>
       </form>
     </main>
+    <!-- Contacts -->
+    <ul class="contact">
+      <li>
+        <a
+          href="https://instagram.com/_pushkar_28?igshid=YmMyMTA2M2Y="
+          target="_blank"
+          title="Go to Instagram Page"
+          ><img class="icons" src="icons/insta-light.svg" alt="instagram icon"
+        /></a>
+      </li>
+      <li>
+        <a
+          href="https://twitter.com/_pushkar_28?t=0TOTw7Tv8KXeVTGEpVnsSg&s=08"
+          target="_blank"
+          title="Go to Twitter Page"
+          ><img class="icons" src="icons/twitter-light.svg" alt=""
+        /></a>
+      </li>
+      <li>
+        <a
+          href="https://www.linkedin.com/in/pushkar-khare-664839220/"
+          target="_blank"
+          title="Go to linkedIn Profile"
+          ><img class="icons" src="icons/linkedIn-light.svg" alt=""
+        /></a>
+      </li>
+      <li>
+        <a
+          href="https://github.com/pushkar-28"
+          target="_blank"
+          title="Go to Github profile"
+          ><img class="icons" src="icons/github-light.svg" alt=""
+        /></a>
+      </li>
+      <li>
+        <a href="mailto:kharepushkar2804@gmail.com" title="Email Me!"
+          ><img class="icons" src="icons/mail-light.svg" alt=""
+        /></a>
+      </li>
+    </ul>
     <script src="script.js"></script>
   </body>
 </html>
