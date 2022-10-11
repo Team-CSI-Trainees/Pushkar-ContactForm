@@ -7,6 +7,7 @@ const email =  document.getElementById("mail");
 const pass =  document.getElementById("pass");
 const cpass =  document.getElementById("cpass");
 const gender =  document.getElementsByClassName("gender");
+const eBox = document.getElementsByClassName("content");
 var check = 0;
 // let temp = 0;
 
@@ -18,11 +19,17 @@ let inner = function(idVal,val){
 let removeError = function(){
     for (let i =0;i<error.length;i++){
         error[i].innerHTML="";
+
+    }
+    for(let j=0;j<eBox.length;j++){
+        eBox[j].style.border= 'none';
+        eBox[j].style.borderBottom = '3px var(--color-body) solid';
     }
 }
 let success = function(){
     alert("your form is sucessfully submitted");
 }
+
 const display = function(returnVal){
     if(returnVal==true){
         let data = {
@@ -68,87 +75,95 @@ function validateForm(){
             inner("error--gender","**please select an option");
         }
     }
-    console.log(returnVal,"button");
+    
     // Checking first name
     fname.value=fname.value.trim();
     if(!(rName.test(fname.value))){
         inner("error--fName","**Invalid");
-        fname.style.border='2px solid red';
+        fname.style.border='1px solid white';
         returnVal= false;   
     }
     
     if(fname.value==""){
         
+        fname.style.border='1px solid white';
         inner("error--fName","**Can't be empty");
         returnVal= false;
     }
-    console.log(returnVal,"fname");
+    
     // Checking last name
     lname.value=lname.value.trim();
     if(!(rName.test(lname.value))){
+        lname.style.border='1px solid white';
         inner("error--lName","**Invalid");
         returnVal= false;
     }
     
     if(lname.value==""){
+        lname.style.border='1px solid white';
         
         inner("error--lName","**Can't be empty");
         returnVal= false;
     }
 
-    console.log(returnVal,"lname");
+    
     
     // Checking mobile number
     phone.value=phone.value.trim();
     if(!(rPhone.test(phone.value))){
+        phone.style.border='1px solid white';
         inner("error--phone","**Invalid phone number");
         returnVal= false;
     }
     if(phone.value==""){
-
+        phone.style.border='1px solid white';
         inner("error--phone","**Can't be empty");
         returnVal= false;
     }
     
-    console.log(returnVal,"phone");
+    
     
     // Checking email
     email.value=email.value.trim();
     if(!(rEmail.test(email.value))){
+        email.style.border='1px solid white';
         inner("error--email","**Invalid email number");
         returnVal= false;
     }
     if(email.value==""){
-        
+        email.style.border='1px solid white';
         inner("error--email","**Can't be empty");
         returnVal= false;
     }
-    console.log(returnVal,"email");
     
     
     // Checking pass error
     pass.value=pass.value.trim();
     if(!(rPass.test(pass.value))){
+        pass.style.border='1px solid white';
         inner("error--pass","**Invalid password");
         returnVal= false;
     }
     if(pass.value==""){
+        pass.style.border='1px solid white';
         inner("error--pass","**Can't be empty");
         returnVal= false;
     }
-    console.log(returnVal,"pass");
+    
     
     // checking cpass error
     cpass.value=cpass.value.trim();
     if(pass.value!==cpass.value){
+        cpass.style.border='1px solid white';
         inner("error--cpass","Doesn't match password");
         returnVal= false;
     }
     if(cpass.value==""){
+        cpass.style.border='1px solid white';
         inner("error--cpass","**Can't be empty");
         returnVal= false;
     }
-    console.log(returnVal,"cpass");
+    
     
     
     display(returnVal);

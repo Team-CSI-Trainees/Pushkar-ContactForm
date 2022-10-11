@@ -88,7 +88,7 @@
 
           <!-- Branch -->
           <div class="wrap">
-            <span class="heading">Branch</span>
+            <span class="heading">Branch</span><br>
             <select name="branch" id="branch">
               <option value="CSE">CSE</option>
               <option value="CSE-AIML">CSE-AIML</option>
@@ -100,7 +100,7 @@
           </div>
           <!-- Domains -->
           <div class="wrap">
-            <span class="heading">Interested Domain</span>
+            <span class="heading">Interested Domain</span> <br>
             <select name="interest" id="interest">
               <option value="webd">Web Development</option>
               <option value="appd">App Development</option>
@@ -115,7 +115,7 @@
     </div>
 
         <!-- Gender -->
-        <div class="wrap">
+        <div class="wrap" id="wrapGender">
           <p class="good" id="heading--gender">Gender</p>
           <input type="radio" class="gender" name="gender" value="Male" />Male
           <input
@@ -130,8 +130,14 @@
         <br />
         <button type="submit" class="buttonSubmit">Submit</button>
       </form>
-    </main>
-    <!-- Contacts -->
+      <div id="contactcsi">
+
+          <h5 class="heading--side">Location <img src="icons/location.svg" alt=""> </h5>
+          <p class="details">CSI lab, <br> 3rd floor CSIT block, <br> AKGEC </p>
+          <h5 class="heading--side">Opening hours</h5>
+          <p class="details">4pm-11pm</p>
+          <h5 class="heading--side">Support Links</h5>
+        <!-- Contacts LOGOS -->
     <ul class="contact">
       <li>
         <a
@@ -171,6 +177,10 @@
         /></a>
       </li>
     </ul>
+      </div>
+    </main>
+    
+    
     <script src="script.js"></script>
   </body>
 </html>
