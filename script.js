@@ -32,6 +32,7 @@ let success = function(){
 
 const display = function(returnVal){
     if(returnVal==true){
+        removeError();
         let data = {
             firstName:fname.value,
             lastName: lname.value,

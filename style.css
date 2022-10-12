@@ -34,7 +34,7 @@ form{
     /* border: 5px solid #4a0c85; */
     min-width: 400px;
     padding: 1rem;
-    width: 50%;
+    width: 35%;
 }
 .wrapper{
 display: grid;
@@ -89,7 +89,7 @@ grid-template-columns: auto auto;
 
 /* Contact CSI */
 #contactcsi{
-    width: 35%;
+    width: 30%;
     min-width: 280px;
     /* height: inherit; */
     /* border: 2px solid var(--color-text); */
