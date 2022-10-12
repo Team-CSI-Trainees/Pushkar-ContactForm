@@ -165,6 +165,10 @@ option{
     .heading--form{
         margin-left: 3vw;
     }
+    /* Error pwd msg */
+    #error--pass{
+        max-width: 10rem;
+    }
     /* side */
     #contactcsi{
         border-left: none;
@@ -214,6 +218,9 @@ option{
         width: 100%;
         /* padding: 1vh 3vw; */
         margin: auto;
+    }
+    #error--pass{
+        max-width: none;
     }
     #wrapGender{
         padding-left: 2vh;

@@ -7,6 +7,7 @@ const email =  document.getElementById("mail");
 const pass =  document.getElementById("pass");
 const cpass =  document.getElementById("cpass");
 const branch =  document.getElementById("branch");
+const domain =  document.getElementById("interest");
 const gender =  document.getElementsByClassName("gender");
 const eBox = document.getElementsByClassName("content");
 var check = 0;
@@ -40,7 +41,8 @@ const display = function(returnVal){
         console.log('Phone Number:',phone.value);
         console.log('Email:',email.value);
         console.log('Gender:',check);
-        // console.log('Branch:',branch.value);
+        console.log('Branch:',branch.value);
+        console.log('Domain:',domain.value);
         
 
         success();
@@ -52,7 +54,7 @@ const display = function(returnVal){
 let rPhone = /^[7-9]([0-9]){9}$/;
 let rEmail = /^([a-zA-Z0-9._-]+)([@]{1})([a-zA-Z0-9-])+.([a-z]{2,10})(.[a-z]{2,8})?$/;
 let rName = /^([a-zA-Z]{3,20})$/;
-let rPass = /^([a-zA-Z0-9_@#]){8,20}$/;
+let rPass = /^(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9!@#$%^&*]{8,20}$/;
 
 
 
@@ -142,7 +144,7 @@ function validateForm(){
     pass.value=pass.value.trim();
     if(!(rPass.test(pass.value))){
         pass.style.border='1px solid white';
-        inner("error--pass","**Min 8 letters, should contain special character <br/> and 1 uppercase letter");
+        inner("error--pass","**Min 8 letters, must contain 1 uppercase letter, number and  special character");
         returnVal= false;
     }
     if(pass.value==""){
