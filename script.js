@@ -165,10 +165,8 @@ function validateForm(){
         returnVal= false;
     }
     
-    
-    
+
     display(returnVal);
-    
-    
+        
     return returnVal;
 }

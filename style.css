@@ -4,6 +4,7 @@
     --color-body:#525254;
     --color-border:#6c6c6dff;
     --color-text: #f7f7f9;
+    --color-lightext: #f7f7f9a0;
 
 }
 
@@ -116,7 +117,7 @@ option{
 }
 .heading--side{
     margin-left: 2vw;
-    
+    color: var(--color-lightext);
 }
 
 
