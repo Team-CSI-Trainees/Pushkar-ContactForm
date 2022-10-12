@@ -17,7 +17,7 @@ body{
     width: 100%;
     background: var(--color-body);
     color: var(--color-text);
-    background-repeat: fixed;
+    background-repeat: no-repeat;
     margin: 0;
     /* background-color: red; */
     /* background-position: top right; */
