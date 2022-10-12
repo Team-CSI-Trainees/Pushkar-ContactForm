@@ -6,6 +6,7 @@ const phone =  document.getElementById("phoneNo");
 const email =  document.getElementById("mail"); 
 const pass =  document.getElementById("pass");
 const cpass =  document.getElementById("cpass");
+const branch =  document.getElementById("branch");
 const gender =  document.getElementsByClassName("gender");
 const eBox = document.getElementsByClassName("content");
 var check = 0;
@@ -33,16 +34,15 @@ let success = function(){
 const display = function(returnVal){
     if(returnVal==true){
         removeError();
-        let data = {
-            firstName:fname.value,
-            lastName: lname.value,
-            phoneNum : phone.value,
-            emailId : email.value,
-            password : pass.value,
-            cpassword : cpass.value,
-            branch : check
-        };
-        console.log(data);
+        
+        console.log('First Name:',fname.value);
+        console.log('Last Name:',lname.value);
+        console.log('Phone Number:',phone.value);
+        console.log('Email:',email.value);
+        console.log('Gender:',check);
+        // console.log('Branch:',branch.value);
+        
+
         success();
     }
     }
@@ -50,7 +50,7 @@ const display = function(returnVal){
 
 // Regex
 let rPhone = /^[7-9]([0-9]){9}$/;
-let rEmail = /^([a-zA-Z0-9\.-_]+)@([a-zA-Z0-9-])+.([a-z]{2,10})(.[a-z]{2,8})?$/;
+let rEmail = /^([a-zA-Z0-9._-]+)([@]{1})([a-zA-Z0-9-])+.([a-z]{2,10})(.[a-z]{2,8})?$/;
 let rName = /^([a-zA-Z]{3,20})$/;
 let rPass = /^([a-zA-Z0-9_@#]){8,20}$/;
 
@@ -142,7 +142,7 @@ function validateForm(){
     pass.value=pass.value.trim();
     if(!(rPass.test(pass.value))){
         pass.style.border='1px solid white';
-        inner("error--pass","**Invalid password");
+        inner("error--pass","**Min 8 letters, should contain special character <br/> and 1 uppercase letter");
         returnVal= false;
     }
     if(pass.value==""){

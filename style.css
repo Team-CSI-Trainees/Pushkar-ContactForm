@@ -71,8 +71,18 @@ grid-template-columns: auto auto;
     border-bottom: 3px var(--color-text) solid;
 
 }
+.content::placeholder{
+    color: var(--color-text);
+}
 
-
+/* Branch */
+select{
+    background-color: var(--color-background);
+    color : var(--color-text);
+}
+option{
+    color: var(--color-text);
+}
 
 /* Submit button */
 .buttonSubmit{
