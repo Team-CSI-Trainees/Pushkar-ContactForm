@@ -35,7 +35,7 @@ form{
     /* border: 5px solid #4a0c85; */
     min-width: 400px;
     padding: 1rem;
-    width: 35%;
+    /* width: 35%; */
 }
 .wrapper{
 display: grid;
@@ -46,6 +46,7 @@ grid-template-columns: auto auto;
     color: red;
     font-size: x-small;
     display: block;
+    padding-top: 1.2vh;
 }
 /* Wrap */
 .wrap{
@@ -66,6 +67,7 @@ grid-template-columns: auto auto;
     background-color: var(--color-background);
     border-bottom: 3px var(--color-body) solid;
     color: var(--color-text);
+    padding: 1.5vh;
 }
 .content:focus{
     color: var(--color-text);
@@ -80,6 +82,7 @@ grid-template-columns: auto auto;
 select{
     background-color: var(--color-background);
     color : var(--color-text);
+    width: 13.5em;
 }
 option{
     color: var(--color-text);
@@ -173,6 +176,7 @@ option{
     #contactcsi{
         border-left: none;
         border-top: 2px solid  var(--color-body);
+        /* padding: 2vh 4vw; */
         width: 100%;
     }
     .heading--side{
